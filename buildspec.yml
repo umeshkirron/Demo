@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+    install:
+        runtime-versions:
+            nodejs: 16
+        commands:
+        -  echo "instaling something"
+    pre_build:
+      commands:
+        - echo "prebuild"
+    build:
+      commands:
+        - echo "build_time"
+        - echo "te time"
+        - grep -Fq "Umesh" index.html
+    post_build:
+       commands:
+        - echo "post build phase"
